@@ -21,7 +21,7 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import { mainListItems, secondaryListItems } from './listItems';
 import Chart from '../../components/Chart';
-import Deposits from '../../components/Deposits';
+import Recovereds from '../../components/Recovereds';
 import Orders from '../../components/Orders';
 import { authenticationService } from '../../services/authentication.service';
 import { Redirect } from 'react-router-dom';
@@ -116,11 +116,11 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
   },
   fixedHeight: {
-    height: 240,
+    height: 480,
   },
 }));
 
-export default function Dashboard() {
+export default function DashboardTotal() {
 
   const classes = useStyles();
   const [open, setOpen] = React.useState(true);
@@ -197,16 +197,16 @@ export default function Dashboard() {
             </Grid>
             {/* Recent Deposits */}
             <Grid item xs={12} md={4} lg={3}>
-              <Paper className={fixedHeightPaper}>
-                <Deposits />
+              <Paper className={classes.paper}>
+                <Recovereds />
               </Paper>
             </Grid>
             {/* Recent Orders */}
-            <Grid item xs={12}>
+            {/* <Grid item xs={12}>
               <Paper className={classes.paper}>
                 <Orders />
               </Paper>
-            </Grid>
+            </Grid> */}
           </Grid>
           <Box pt={4}>
             <Copyright />
