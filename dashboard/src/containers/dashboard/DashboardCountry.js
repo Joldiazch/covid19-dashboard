@@ -22,7 +22,6 @@ import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import { mainListItems, secondaryListItems } from './listItems';
 import Chart from '../../components/Chart';
 import Recovereds from '../../components/Recovereds';
-import Orders from '../../components/Orders';
 import { authenticationService } from '../../services/authentication.service';
 import { Redirect } from 'react-router-dom';
 import Autocomplete from '@material-ui/lab/Autocomplete';

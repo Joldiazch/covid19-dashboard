@@ -22,7 +22,6 @@ import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import { mainListItems, secondaryListItems } from './listItems';
 import Chart from '../../components/Chart';
 import Recovereds from '../../components/Recovereds';
-import Orders from '../../components/Orders';
 import { authenticationService } from '../../services/authentication.service';
 import { Redirect } from 'react-router-dom';
 
@@ -116,7 +115,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
   },
   fixedHeight: {
-    height: 480,
+    height: 240,
   },
 }));
 
@@ -195,9 +194,9 @@ export default function DashboardTotal() {
                 <Chart />
               </Paper>
             </Grid>
-            {/* Recent Deposits */}
+            {/* Recent Recovereds */}
             <Grid item xs={12} md={4} lg={3}>
-              <Paper className={classes.paper}>
+              <Paper className={fixedHeightPaper}>
                 <Recovereds />
               </Paper>
             </Grid>

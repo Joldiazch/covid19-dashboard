@@ -7,7 +7,6 @@ import Autocomplete from '@material-ui/lab/Autocomplete';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Chart from './Chart';
-import Recovereds from './Recovereds';
 
 
 const useStyles = makeStyles((theme) => ({
