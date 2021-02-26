@@ -14,7 +14,7 @@ const query = JSON.stringify({
   }`
 });
 
-export default function Chart(props) {
+export default function Chart() {
 
   const [data, setData] = useState([]);
   const theme = useTheme();
@@ -23,7 +23,7 @@ export default function Chart(props) {
     const requestOptions = {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: props.query ? props.query : query
+      body: query
     };
     fetch("http://localhost:8000/graphql/", requestOptions)
     .then(response => response.json())
